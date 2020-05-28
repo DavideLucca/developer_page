@@ -1,36 +1,92 @@
-body {
+  /* Reset do CSS, para remover algumas definicoes pre-existentes no HTML */
+  /* TODO: ver Reset CSS */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* começa a contar o tamanho do espaçamento a partir da borda interna */
+  }
+
+  body {
     /*   background: #4499ff; */
       background-image: url('https://wallpaperaccess.com/full/1567833.jpg');
       background-size: auto 100;
-      font-family: Arial;
+      font-family: 'Permanent Marker', cursive;
+      height: 100vh;
+      font-size: 12px;
     }
+
+  /* caso a tela tenha pelo menos 400px vai carregar estes estilos */
+  @media (min-width: 400px) {
+    body {
+      font-size: 14px;
+    }
+  }
+
+  @media (min-width: 600px) {
+    body {
+      font-size: 18px;
+    }
+  }
+
+  header {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
     
-    .menu {
-      background-color: white;
-    }
-    
-    .menu li {
-      list-style: none;
-    }
-    
-    .menu ul {
-      display: flex;
-      justify-content: space-around;
-    }
-    
-    a {
-      text-decoration: none;
-    }
-    
-    a:hover {
-      text-decoration: underline;
-    }
-    
-    .site-subtitle, .site-title {
-      color: blue;
-      text-align: center;
-    }
-    
-    .site-subtitle {
-      font-style: italic;
-    }
+   .menu {
+     background-color: white;
+     position: fixed;
+     width: 100vw;
+     top: 0;
+   }
+   
+   .menu li {
+     list-style: none;
+   }
+   
+   .menu ul {
+     display: flex;
+     justify-content: space-around;
+   }
+
+   .menu a {
+     /* background-color: aqua; */
+     display: block;
+     padding: 10px 20px;
+     /* background: aquamarine; */
+   }
+   
+   a {
+     color: teal;
+     text-decoration: none;
+   }
+   
+   a:hover {
+     text-decoration: underline;
+   }
+   
+   .site-subtitle, .site-title {
+     color: blue;
+     text-align: center;
+   }
+
+   .site-title {
+     font-size: 4em;
+     font-family: 'Roboto', sans-serif;
+   }
+   
+   .site-subtitle {
+     font-style: italic;
+     font-family: 'Permanent Marker', cursive;
+   }
+
+   .portifolio h2 {
+    font-family: 'Permanent Marker', cursive;
+   }
+
+   .img-portfolio {
+     height: 180px;
+     width: 180px;
+   }
